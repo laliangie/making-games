@@ -2,14 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, paper, scissors!</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-        <script src="main.js"></script>
-        <h1>Choose one!</h1>
-
-
+    <script src="main.js" defer></script>
+    <h1>Choose one!</h1>
+    <div id="buttons">
+        <button id="paper">paper</button>
+        <button id="rock">rock</button>
+        <button id="scissors">scissors</button>
+</div>
+    <div id="display">
+        <h1>Total score:</h1>
+            <ul>
+                <li>Player: <span id="playerScore"></span> points.</li>
+                <li>Computer: <span id="pcScore"></span> points.</li>
+            </ul>
+    <span id="congratsMessage"></span>
+    </div>
 </body>
 </html>
+
+<!-- PSEUDOCODE:
+    1. 3 variables:  --------------- CREATED THE ARRAY options = ['paper', 'rock', 'scissors']
+        1) paper
+        2) scissors
+        3) rock
+    2. Random choice from computer (1, 2, or 3).  -------- LISTO! Math.floor(Math.random()*"the array".length)
+    3. 10 OUTCOMES:
+       'You win!'
+       1) player ROCK - pc SCISSORS
+       2) player PAPER - pc ROCK
+       3) player SCISSORS - pc PAPER
+
+       'You lose!'
+       4) player ROCK - pc PAPER
+       5) player PAPER - pc SCISSORS
+       6) player SCISSORS - pc ROCK
+
+        'It's a tie!'
+       7) player & pc ROCK
+       8) player & pc PAPER
+       9) player & pc SCISSORS
+    
+       'Please, enter rock, paper, or scissors.'
+       10) null, undefined, another option.
+    
+    1) IF userChoice = computerChoice: 'It's a tie!'
+        2) ELSE IF userChoice < computerChoice: 'You lose :('
+        3) ELSE IF userChoice > computerChoice: 'You win!'
+    4. Button "Play again"
+-->
